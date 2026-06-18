@@ -28,6 +28,18 @@
                 </div>
 
                 <h2>Build Your Resume</h2>
+
+                <!-- Upload Old Resume Section -->
+                <fieldset>
+                    <legend>📤 Upload Your Old Resume</legend>
+                    <div class="form-group">
+                        <label for="resumeFile">Upload Resume (PDF or Text):</label>
+                        <input type="file" id="resumeFile" accept=".pdf,.doc,.docx,.txt" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;">
+                        <p style="font-size: 0.85em; color: #888; margin-top: 8px;">Supported formats: PDF, Word (.doc, .docx), Text (.txt)</p>
+                    </div>
+                    <button type="button" onclick="uploadResume()" style="background: #667eea; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">Parse Resume</button>
+                    <p id="uploadStatus" style="margin-top: 10px; font-size: 0.9em; color: #666;"></p>
+                </fieldset>
                 
                 <!-- Personal Information -->
                 <fieldset>
