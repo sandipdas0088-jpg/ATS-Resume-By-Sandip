@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ATS Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1em;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: #5568d3;
+        }
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .contact-card {
+            padding: 20px;
+            background: var(--light-bg);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .contact-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .contact-card p {
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+        .contact-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Us</h1>
+            <p>Have questions? We'd love to hear from you!</p>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="help.html" class="nav-link">Help</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+        </header>
+
+        <main style="display: block; padding: 40px;">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 40px;">Get In Touch</h2>
+                
+                <div class="contact-form">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 5px; background: var(--bg-color); color: var(--text-color);">
+                                <option value="general">General Inquiry</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Please describe your inquiry..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <p style="text-align: center; margin-top: 20px; color: #888; font-size: 0.9em;">
+                        * Required fields
+                    </p>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>📧 Email</h3>
+                        <p>
+                            For support inquiries, please email us at:<br>
+                            <a href="mailto:sandip.das0088@gmail.com">sandip.das0088@gmail.com</a>
+                        </p>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Response time: Within 24 hours</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>🐙 GitHub</h3>
+                        <p>
+                            Found a bug or have a suggestion?<br>
+                            <a href="https://github.com/sandipdas0088-jpg/ATS-Resume-By-Sandip" target="_blank">Open an Issue on GitHub</a>
+                        </p>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Community driven development</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px; padding: 30px; background: var(--light-bg); border-radius: 8px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">📋 Frequently Asked Questions</h3>
+                    <ul style="line-height: 2; color: var(--text-color);">
+                        <li><strong>Response Time:</strong> We typically respond to emails within 24 hours</li>
+                        <li><strong>Feature Requests:</strong> We'd love to hear your ideas! Please describe the feature and why you need it</li>
+                        <li><strong>Bug Reports:</strong> Include details about the issue, your browser, and steps to reproduce</li>
+                        <li><strong>Privacy:</strong> Your data is never shared or stored on our servers</li>
+                        <li><strong>Contributing:</strong> Interested in contributing? Check out our GitHub repository</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 30px; padding: 20px; background: #e8f4f8; border-left: 4px solid #667eea; border-radius: 5px;">
+                    <h3 style="color: #667eea; margin-bottom: 10px;">💡 Pro Tip</h3>
+                    <p style="color: var(--text-color); line-height: 1.8;">
+                        Before reaching out, check our <a href="help.html" style="color: #667eea; font-weight: bold; text-decoration: none;">Help & FAQ page</a> 
+                        for answers to common questions. You might find what you're looking for there!
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 ATS Resume Builder. All rights reserved.</p>
+            <p>Need help? <a href="contact.html">Contact Support</a> | Email: <a href="mailto:sandip.das0088@gmail.com">sandip.das0088@gmail.com</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Construct mailto link
+            const mailtoLink = `mailto:sandip.das0088@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+            
+            window.location.href = mailtoLink;
+            
+            // Alert user
+            alert('Opening email client. If it doesn\'t open, please email us directly at sandip.das0088@gmail.com');
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>
