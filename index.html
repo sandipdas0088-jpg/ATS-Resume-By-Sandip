@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Builder - Create Your Perfect Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ATS Resume Builder</h1>
+            <p>Create an ATS-optimized resume that passes through applicant tracking systems</p>
+        </header>
+
+        <main>
+            <div class="form-section">
+                <h2>Build Your Resume</h2>
+                
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" placeholder="(123) 456-7890">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" placeholder="City, State">
+                    </div>
+                </fieldset>
+
+                <!-- Professional Summary -->
+                <fieldset>
+                    <legend>Professional Summary</legend>
+                    <div class="form-group">
+                        <label for="summary">Summary:</label>
+                        <textarea id="summary" rows="4" placeholder="Brief professional summary..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Experience -->
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <div id="experienceContainer"></div>
+                    <button type="button" onclick="addExperience()">+ Add Experience</button>
+                </fieldset>
+
+                <!-- Education -->
+                <fieldset>
+                    <legend>Education</legend>
+                    <div id="educationContainer"></div>
+                    <button type="button" onclick="addEducation()">+ Add Education</button>
+                </fieldset>
+
+                <!-- Skills -->
+                <fieldset>
+                    <legend>Skills</legend>
+                    <div class="form-group">
+                        <label for="skills">Skills (comma-separated):</label>
+                        <textarea id="skills" rows="3" placeholder="JavaScript, React, Node.js, ..."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="button-group">
+                    <button onclick="generateResume()" class="btn-primary">Preview Resume</button>
+                    <button onclick="downloadResume()" class="btn-secondary">Download as PDF</button>
+                </div>
+            </div>
+
+            <!-- Resume Preview -->
+            <div class="preview-section">
+                <h2>Resume Preview</h2>
+                <div id="resumePreview" class="resume-output"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 ATS Resume Builder. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
