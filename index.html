@@ -11,10 +11,22 @@
         <header>
             <h1>ATS Resume Builder</h1>
             <p>Create an ATS-optimized resume that passes through applicant tracking systems</p>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="help.html" class="nav-link">Help</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
         </header>
 
         <main>
             <div class="form-section">
+                <div class="controls">
+                    <button onclick="toggleDarkMode()" class="btn-dark-mode" id="darkModeBtn">🌙 Dark Mode</button>
+                    <button onclick="saveResume()" class="btn-save">💾 Save Resume</button>
+                    <button onclick="clearResume()" class="btn-clear">🗑️ Clear</button>
+                </div>
+
                 <h2>Build Your Resume</h2>
                 
                 <!-- Personal Information -->
@@ -35,6 +47,23 @@
                     <div class="form-group">
                         <label for="location">Location:</label>
                         <input type="text" id="location" placeholder="City, State">
+                    </div>
+                </fieldset>
+
+                <!-- Social Links -->
+                <fieldset>
+                    <legend>Social Links</legend>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile:</label>
+                        <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourname">
+                    </div>
+                    <div class="form-group">
+                        <label for="github">GitHub Profile:</label>
+                        <input type="url" id="github" placeholder="https://github.com/yourname">
+                    </div>
+                    <div class="form-group">
+                        <label for="portfolio">Portfolio Website:</label>
+                        <input type="url" id="portfolio" placeholder="https://yourportfolio.com">
                     </div>
                 </fieldset>
 
@@ -61,6 +90,34 @@
                     <button type="button" onclick="addEducation()">+ Add Education</button>
                 </fieldset>
 
+                <!-- Certifications -->
+                <fieldset>
+                    <legend>Certifications & Licenses</legend>
+                    <div id="certificationsContainer"></div>
+                    <button type="button" onclick="addCertification()">+ Add Certification</button>
+                </fieldset>
+
+                <!-- Projects -->
+                <fieldset>
+                    <legend>Projects</legend>
+                    <div id="projectsContainer"></div>
+                    <button type="button" onclick="addProject()">+ Add Project</button>
+                </fieldset>
+
+                <!-- Languages -->
+                <fieldset>
+                    <legend>Languages</legend>
+                    <div id="languagesContainer"></div>
+                    <button type="button" onclick="addLanguage()">+ Add Language</button>
+                </fieldset>
+
+                <!-- Awards -->
+                <fieldset>
+                    <legend>Awards & Recognition</legend>
+                    <div id="awardsContainer"></div>
+                    <button type="button" onclick="addAward()">+ Add Award</button>
+                </fieldset>
+
                 <!-- Skills -->
                 <fieldset>
                     <legend>Skills</legend>
@@ -73,19 +130,23 @@
                 <div class="button-group">
                     <button onclick="generateResume()" class="btn-primary">Preview Resume</button>
                     <button onclick="downloadResume()" class="btn-secondary">Download as PDF</button>
+                    <button onclick="downloadWord()" class="btn-tertiary">Download as Word</button>
                 </div>
             </div>
 
             <!-- Resume Preview -->
             <div class="preview-section">
-                <h2>Resume Preview</h2>
+                <div class="preview-controls">
+                    <h2>Resume Preview</h2>
+                    <div id="atsScore" class="ats-score"></div>
+                </div>
                 <div id="resumePreview" class="resume-output"></div>
             </div>
         </main>
 
         <footer>
             <p>&copy; 2026 ATS Resume Builder. All rights reserved.</p>
-            <p>Need help? <a href="mailto:sandip.das0088@gmail.com">Contact Support</a></p>
+            <p>Need help? <a href="contact.html">Contact Support</a> | Email: <a href="mailto:sandip.das0088@gmail.com">sandip.das0088@gmail.com</a></p>
         </footer>
     </div>
 
