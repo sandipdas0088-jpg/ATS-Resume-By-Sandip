@@ -1,6 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATS Resume Builder Sandip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Build ATS-Friendly Resume in Minutes</h1>
+    <p>Get hired faster with optimized resumes</p>
+    <div class="hero-buttons">
+      <a href="resume-builder.html" class="btn-primary">Create Resume Free</a>
+      <a href="#templates" class="btn-secondary">View Templates</a>
+    </div>
+  </header>
+
+  <!-- Template Slider -->
+  <section id="templates" class="templates">
+    <h2>Choose Your Resume Template</h2>
+    <div class="template-slider">
+      <div class="template-card">Professional Corporate</div>
+      <div class="template-card">Modern Minimal</div>
+      <div class="template-card">Tech Resume</div>
+      <div class="template-card">Fresher Resume</div>
+      <div class="template-card">Creative Designer</div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-list">
+      <div class="feature">✔ ATS Score Checker</div>
+      <div class="feature">✔ AI Resume Suggestions</div>
+      <div class="feature">✔ 1-Click PDF Download</div>
+      <div class="feature">✔ Professional Templates</div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section class="trust">
+    <h2>Trusted by Students & Professionals</h2>
+    <p>“This builder helped me land my first job interview!”</p>
+    <p>“Clean, simple, and ATS-friendly resumes.”</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 ATS Resume Builder Sandip. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATS Resume Builder - Create Your Perfect Resume</title>
@@ -165,3 +220,82 @@
     <script src="app.js"></script>
 </body>
 </html>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background: #ff6f61;
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  color: #0077b6;
+}
+
+.templates, .features, .trust {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.template-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.template-card {
+  flex: 0 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+
